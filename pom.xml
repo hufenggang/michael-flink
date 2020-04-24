@@ -28,7 +28,7 @@
         <fastjson.version>1.2.47</fastjson.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <flink.version>1.9.0</flink.version>
-        <flink-connector-kafka_2.11.version>1.10.0</flink-connector-kafka_2.11.version>
+        <flink-connector-kafka_2.11.version>1.9.0</flink-connector-kafka_2.11.version>
     </properties>
 
     <dependencyManagement>
@@ -112,11 +112,6 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.flink</groupId>
-                <artifactId>flink-connector-kafka_2.11</artifactId>
-                <version>${flink.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.flink</groupId>
                 <artifactId>flink-avro</artifactId>
                 <version>${flink.version}</version>
             </dependency>
@@ -135,14 +130,8 @@
             <!-- 引入flink-connector-kafka_2.12依赖 -->
             <dependency>
                 <groupId>org.apache.flink</groupId>
-                <artifactId>flink-connector-kafka_2.12</artifactId>
-                <version>${flink-connector-kafka_2.11.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.flink</groupId>
-                <artifactId>flink-java</artifactId>
-                <version>${flink.version}</version>
+                <artifactId>flink-connector-kafka_2.11</artifactId>
+                <version>1.9.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

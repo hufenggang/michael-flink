@@ -2,14 +2,13 @@ package cn.michael.flink.streaming.connector.kafka
 
 import java.util.Properties
 
-import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer011
 
 /**
- * Created by hufenggang on 2020/4/22.
+ * Created by hufenggang on 2020/4/24.
  */
-object Example01 {
+object KafakProducer {
 
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
@@ -18,11 +17,10 @@ object Example01 {
     properties.setProperty("bootstrap.servers", "localhost:9092")
     properties.setProperty("group.id", "test")
 
-    val stream = env
-      .addSource(new FlinkKafkaConsumer[String]("test", new SimpleStringSchema(), properties))
-      .print()
+    val myProducer = new FlinkKafkaProducer011[String]()
+    myProducer.setWriteTimestampToKafka(true)
 
-    env.execute("test")
+    stream.addSink(myProducer)
   }
 
 }
