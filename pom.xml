@@ -12,6 +12,7 @@
     <modules>
         <module>flink-examples</module>
         <module>flink-streaming</module>
+        <module>flink-datastream</module>
     </modules>
 
     <properties>
