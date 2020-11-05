@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.michael.flink.streaming</groupId>
-    <artifactId>flink-streaming</artifactId>
+    <artifactId>flink-streaming-scala</artifactId>
 
     <dependencies>
         <!-- 引入scala依赖 -->
@@ -106,7 +106,7 @@
     </profiles>
 
     <build>
-        <finalName>flink-streaming</finalName>
+        <finalName>flink-streaming-scala</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
