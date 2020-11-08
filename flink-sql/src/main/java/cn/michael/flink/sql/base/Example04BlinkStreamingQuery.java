@@ -9,11 +9,14 @@ import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
  *
  * Blink版本的流式查询
  */
-public class BlinkStreamingQuery {
+public class Example04BlinkStreamingQuery {
 
     public static void main(String[] args) {
         StreamExecutionEnvironment bsEnv = StreamExecutionEnvironment.getExecutionEnvironment();
-        EnvironmentSettings bsSettings = EnvironmentSettings.newInstance().useBlinkPlanner().inStreamingMode().build();
+        EnvironmentSettings bsSettings = EnvironmentSettings.newInstance()
+            .useBlinkPlanner()
+            .inStreamingMode()
+            .build();
         StreamTableEnvironment bsTableEnv = StreamTableEnvironment.create(bsEnv, bsSettings);
     }
 }

@@ -8,7 +8,7 @@ import org.apache.flink.table.api.TableEnvironment;
  *
  * Blink版本的批式查询
  */
-public class BlinkBatchQuery {
+public class Example03BlinkBatchQuery {
 
     public static void main(String[] args) {
         EnvironmentSettings bbSettings = EnvironmentSettings.newInstance().useBlinkPlanner().inBatchMode().build();

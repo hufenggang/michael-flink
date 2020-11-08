@@ -8,7 +8,7 @@ import org.apache.flink.table.api.bridge.java.BatchTableEnvironment;
  *
  * Flink老版本的批式查询
  */
-public class FlinkBatchQuery {
+public class Example01FlinkBatchQuery {
 
     public static void main(String[] args) {
         ExecutionEnvironment fbEnv = ExecutionEnvironment.getExecutionEnvironment();

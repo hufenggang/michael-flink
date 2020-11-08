@@ -9,7 +9,7 @@ import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
  *
  * Flink老版本的流式查询
  */
-public class FlinkStreamingQuery {
+public class Example02FlinkStreamingQuery {
 
     public static void main(String[] args) {
 
