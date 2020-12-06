@@ -10,7 +10,7 @@ import org.apache.flink.api.java.tuple.Tuple2;
 /**
  * Created by hufenggang on 2020/7/23.
  */
-public class WIndowWordCount {
+public class WindowWordCount {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -22,7 +22,7 @@ public class WIndowWordCount {
 
         dataStream.print();
 
-        env.execute("WIndowWordCount");
+        env.execute("WindowWordCount");
     }
 
     public static class Splitter implements FlatMapFunction<String, Tuple2<String, Integer>> {
