@@ -19,7 +19,7 @@ public class TumblingWindowsExample {
 
     public static void main(String[] args) throws Exception {
 
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();;
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();;
 
         Properties pros = new Properties();
         pros.setProperty("bootstrap.servers", "127.0.0.1:9092");

@@ -1,4 +1,4 @@
-package cn.michael.flink.app.controller;
+package cn.michael.flink.app.task;
 
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 

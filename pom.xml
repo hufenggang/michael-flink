@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <module>common</module>
         <module>flink-datastream</module>
         <module>flink-sql</module>
         <module>flink-streaming</module>
@@ -37,7 +38,6 @@
     <dependencyManagement>
         <dependencies>
 
-            <!--引入junit依赖-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -45,28 +45,24 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- 引入scala依赖 -->
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-library</artifactId>
                 <version>${scala.version}</version>
             </dependency>
 
-            <!--引入guava依赖-->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
 
-            <!-- 引入Gson依赖 -->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>${gson.version}</version>
             </dependency>
 
-            <!--引入日志依赖-->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -78,28 +74,24 @@
                 <version>${slf4j-log4j12.version}</version>
             </dependency>
 
-            <!--引入commons-lang依赖-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
 
-            <!--引入fastjson依赖-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
 
-            <!--引入Jedis开发相关依赖-->
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
             </dependency>
 
-            <!--引入Flink开发相关依赖-->
             <dependency>
                 <groupId>org.apache.flink</groupId>
                 <artifactId>flink-scala_2.11</artifactId>
@@ -137,11 +129,16 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- 引入flink-connector-kafka_2.12依赖 -->
             <dependency>
                 <groupId>org.apache.flink</groupId>
                 <artifactId>flink-connector-kafka_2.11</artifactId>
                 <version>${flink-connector-kafka_2.11.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-connector-elasticsearch6_2.12</artifactId>
+                <version>${flink.version}</version>
             </dependency>
 
             <!-- Flink Table & SQL -->
